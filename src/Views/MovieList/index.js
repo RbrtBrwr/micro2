@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { MovieCard } from "../../MovieCard";
 import './MovieList.css';
 
 const MovieList = () => {
@@ -21,13 +22,14 @@ const MovieList = () => {
             return <div>Loading...</div>;
         } else{
     return (
-        <ul>
+        <div>
             {movieList.map(movieList => (
-            <li key={movieList.id}>
-                {movieList.id} 
-            </li>
+                <MovieCard 
+                    movieList={movieList}
+                    key={movieList.id}
+                />
             ))}
-        </ul>
+        </div>
     );}
 }
 
