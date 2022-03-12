@@ -1,0 +1,32 @@
+.login-container {
+    height: calc(100vh - 10.4rem);
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.login-container .login-form-container {
+    background-color: white;
+    padding: 3rem;
+    box-shadow: 1px 5px 5px 5px #8E9DCC;
+    border-radius: 5px;
+}
+.login-container .login-form-container .login-info {
+    font-size: 2rem;
+}
+
+@media (max-width: 530px) {
+    .login-container .login-form-container {
+        width: 100%;
+    }
+    .login-container .login-form-container {
+        border-radius: 0;
+    }
+}
+@media (max-width:800px) {
+
+    .login-container {
+        justify-content: center;
+    }
+}

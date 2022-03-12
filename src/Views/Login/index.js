@@ -1,6 +1,7 @@
 import React from 'react';
 import './Login.css';
-import { GoogleButton } from '../../components/googleButton/googleButton';
+import { GoogleButton } from '../../components/googleButton';
+import { XForm } from '../../components/xForm';
 
 const Login = () => {
     return(
@@ -8,7 +9,7 @@ const Login = () => {
             <div className="login-form-container">
                 <p className="login-info">¡Ingresa en tu cuenta y disfruta de las mejores películas!</p>
                 <GoogleButton />
-                <Form view={'login'} />
+                <XForm view={'login'} />
             </div>
         </div>
 
