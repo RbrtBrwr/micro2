@@ -1,0 +1,29 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 10.4rem);
+    width: 100%;
+    background-color: white;
+}
+
+.register-container .register-form-container {
+    background-color: white;
+    padding: 3rem;
+    box-shadow: 1px 5px 5px 5px #8E9DCC;
+    border-radius: 5px;
+}
+.register-container .register-form-container .register-info {
+    font-size: 2rem;
+}
+
+@media (max-width: 530px) {
+    .register-container .register-form-container {
+        width: 100%;
+    }
+    .register-container .register-form-container {
+        border-radius: 0;
+    }
+    .register-container .register-form-container .register-info {
+        font-size: 1.7rem;
+    }
+}

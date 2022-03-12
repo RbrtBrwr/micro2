@@ -1,4 +1,8 @@
+import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Register } from '../Views/Register';
+import { Login } from '../Views/Login';
 import { Header } from '../Header';
 import { Movie } from '../Movie';
 
@@ -89,14 +93,16 @@ const testJson = {
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Movie
-        testJson={testJson}
-      />
+    <BrowserRouter>
+          <Routes>
+            <Route path={'/register'} element={<Register />} />
+            <Route path={'/login'} element={<Login />} />
+          </Routes>
+    </BrowserRouter>
+    <Header/>
+    <Movie
+      testJson={testJson}
+    />
 
-    </div>
-  );
-}
 
 export { App };

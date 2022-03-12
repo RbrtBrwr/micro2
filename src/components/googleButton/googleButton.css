@@ -1,0 +1,29 @@
+.google-button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+.google-button-container div {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    transition: all 0.3s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.google-button-container div figure {
+    height: 5rem;
+}
+.google-button-container div figure img {
+    height: 100%;
+}
+.google-button-container .google-button {
+    box-shadow: 5px 5px 5px #8E9DCC;
+}
+
+.google-button-container div:hover {
+    transform: scale(1.2);
+}
