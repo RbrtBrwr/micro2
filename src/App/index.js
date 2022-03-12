@@ -5,6 +5,7 @@ import { Register } from '../Views/Register';
 import { Login } from '../Views/Login';
 import { Header } from '../Header';
 import { Movie } from '../Movie';
+import { MovieList } from '../Views/MovieList';
 
 const testJson = {
   "adult": false,
@@ -97,7 +98,7 @@ function App() {
           <Routes>
             <Route path={'/register'} element={<Register />} />
             <Route path={'/login'} element={<Login />} />
-            <Route path={'/'} element={<Movie testJson={testJson}/>} />
+            <Route path={'/'} element={<MovieList/>} />
           </Routes>
     </BrowserRouter>
     // <Header/>

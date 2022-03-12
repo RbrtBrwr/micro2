@@ -2,6 +2,7 @@ import './Movie.css';
 import React from 'react';
 import { List, Production } from '../List';
 import { ListItem } from '../ListItem';
+import { MovieList } from '../Views/MovieList';
 
 function Movie(props){
     return(
@@ -49,6 +50,7 @@ function Movie(props){
             <p className='status' id='status'>Status: {props.testJson.status}</p>
 
         </div>
+        
     )
 };
 
