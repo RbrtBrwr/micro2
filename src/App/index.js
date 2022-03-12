@@ -97,12 +97,12 @@ function App() {
           <Routes>
             <Route path={'/register'} element={<Register />} />
             <Route path={'/login'} element={<Login />} />
+            <Route path={'/'} element={<Movie testJson={testJson}/>} />
           </Routes>
     </BrowserRouter>
-    <Header/>
-    <Movie
-      testJson={testJson}
-    />
+    // <Header/>
+    
+  )}
 
 
 export { App };
