@@ -6,6 +6,7 @@ import { Login } from '../Views/Login';
 import { Header } from '../Header';
 import { Movie } from '../Movie';
 import { MovieList } from '../Views/MovieList';
+import { Home } from '../Views/Home';
 import UserContextProvider from '../context/UserContext';
 
 
@@ -102,6 +103,7 @@ function App() {
                 <UserContextProvider>
         <Header/>
           <Routes>
+          <Route path={'/'} element={<Home />} />
             <Route path={'/register'} element={<Register />} />
             <Route path={'/login'} element={<Login />} />
 
