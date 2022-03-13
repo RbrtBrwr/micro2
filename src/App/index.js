@@ -95,13 +95,15 @@ const testJson = {
 function App() {
   return (
     <BrowserRouter>
+        <Header/>
           <Routes>
             <Route path={'/register'} element={<Register />} />
             <Route path={'/login'} element={<Login />} />
-            <Route path={'/'} element={<MovieList/>} />
+            <Route path={'/movielist'} element={<MovieList/>} />
+            {/* <Route path={'/'} element={<Movie testJson={testJson}/>} /> */}
           </Routes>
     </BrowserRouter>
-    // <Header/>
+
     
   )}
 

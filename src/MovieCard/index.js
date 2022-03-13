@@ -1,12 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import './MovieCard.css';
 
 function MovieCard(props){
-    const handleMovieClick = () => {
-        console.log(props.movieList.original_title);
-    }
+
+    const navLinkRoute = "/" + props.movieList.original_title;
+    
     return(
-        <div className="movieCard" onClick={handleMovieClick}>
+        <NavLink to={navLinkRoute}>
+        <div className="movieCard">
             <h1 className='movie__title' id='movie__title'>
                 {props.movieList.original_title}
             </h1>
@@ -22,6 +24,7 @@ function MovieCard(props){
             <p className='rating' id='rating'>Rating: {props.movieList.popularity}</p>
             <p className='date' id='date'>Fecha de estreno: {props.movieList.release_date}</p>
         </div>
+        </ NavLink>
     );
 }
 
