@@ -4,6 +4,7 @@
     height: 450px;
     text-align: center;
     border-style: ridge;
+    border-radius: 5px;
 }
 h1 {
     width: 100%;
