@@ -6,7 +6,6 @@ import { Login } from '../Views/Login';
 import { Header } from '../Header';
 import { Movie } from '../Movie';
 import { MovieList } from '../Views/MovieList';
-import { MovieInfo } from '../Views/MovieInfo';
 import UserContextProvider from '../context/UserContext';
 
 
