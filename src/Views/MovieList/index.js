@@ -9,10 +9,13 @@ const MovieList = () => {
     const [movieList, setMovieList] = React.useState([]);
     const [isLoaded, setIsLoaded] = React.useState(false);
     const [searchValue, setSearchValue] = React.useState('');
+    const [currentPage, setCurrentPage] = React.useState(1);
+
 
 
     //Api URL
-    const apiURL = 'https://api.themoviedb.org/3/discover/movie?api_key=f26dc163b9c303160b360fa5d7cf9d6f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate';
+    let apiURL = `https://api.themoviedb.org/3/discover/movie?api_key=f26dc163b9c303160b360fa5d7cf9d6f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${currentPage}&with_watch_monetization_types=flatrate`;
+    
 
     //Fetch API data and store in movieList
     useEffect(() => {
@@ -23,7 +26,7 @@ const MovieList = () => {
                     setIsLoaded(true);
                     setMovieList(data.results);
                 })
-    }, [])
+    }, [currentPage]);
 
     //Dinamic search functionality
     let searchedMovies = [];
@@ -37,6 +40,17 @@ const MovieList = () => {
         
         return movieText.includes(searchText);
     });
+    }
+
+    //Change page +1
+    const onClickRight = () => {
+        setCurrentPage(currentPage + 1);
+
+    }
+
+    ////Change page -1
+    const onClickLeft = () => {
+        setCurrentPage(currentPage - 1);
     }
 
     //Render
@@ -56,6 +70,20 @@ const MovieList = () => {
                     key={searchedMovies.id}
                 />
             ))}
+        </div>
+        <div className="paginator-wrapper">
+            {currentPage === 1 ?
+            <React.Fragment>
+            <div className="page">{currentPage}</div>
+            <button className="right-arrow" onClick={onClickRight}>→</button>
+            </React.Fragment>
+            : 
+            <React.Fragment>
+            <button className="left-arrow" onClick={onClickLeft}>←</button>
+            <div className="page">{currentPage}</div>
+            <button className="right-arrow" onClick={onClickRight}>→</button>
+            </React.Fragment>
+        }
         </div>
 
         </React.Fragment>

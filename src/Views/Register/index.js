@@ -1,6 +1,8 @@
 import React from 'react';
 import './Register.css';
 import { XForm } from '../../components/xForm';
+import { useState, useEffect } from 'react';
+import { db } from '../../utils/firebase-config';
 
 const Register = () => {
     return (

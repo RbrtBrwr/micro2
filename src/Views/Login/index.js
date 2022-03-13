@@ -2,6 +2,8 @@ import React from 'react';
 import './Login.css';
 import { GoogleButton } from '../../components/googleButton';
 import { XForm } from '../../components/xForm';
+import { useState, useEffect } from 'react';
+import { db } from '../../utils/firebase-config';
 
 const Login = () => {
     return(
