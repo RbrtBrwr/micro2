@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { MovieCard } from "../../MovieCard";
 import './MovieList.css';
 import { SearchBar } from "../../components/SearchBar";
+import { Movie } from "../../Movie";
 
 const MovieList = () => {
     
@@ -15,7 +16,7 @@ const MovieList = () => {
 
     //Api URL
     let apiURL = `https://api.themoviedb.org/3/discover/movie?api_key=f26dc163b9c303160b360fa5d7cf9d6f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${currentPage}&with_watch_monetization_types=flatrate`;
-    
+    let whatever = 0;
 
     //Fetch API data and store in movieList
     useEffect(() => {
@@ -41,6 +42,7 @@ const MovieList = () => {
         return movieText.includes(searchText);
     });
     }
+
 
     //Change page +1
     const onClickRight = () => {
