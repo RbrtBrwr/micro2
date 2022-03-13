@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { MovieCard } from "../../MovieCard";
 import './MovieList.css';
 import { SearchBar } from "../../components/SearchBar";
 
 const MovieList = () => {
-
+    
     //States
     const [movieList, setMovieList] = React.useState([]);
     const [isLoaded, setIsLoaded] = React.useState(false);
@@ -45,16 +46,18 @@ const MovieList = () => {
     return (
         <React.Fragment>
         <SearchBar 
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
         />     
-        <ul>
-            {searchedMovies.map(movieList => (
-            <li key={movieList.id}>
-                {movieList.original_title} 
-            </li>
+        <div>
+            {searchedMovies.map(searchedMovies => (
+                <MovieCard 
+                    movieList={searchedMovies}
+                    key={searchedMovies.id}
+                />
             ))}
-        </ul>
+        </div>
+
         </React.Fragment>
     );}
 }

@@ -8,10 +8,12 @@ const SearchBar = ({searchValue, setSearchValue}) => {
     };
     return[
         <input 
-        className='search-bar' 
-        placeholder='Busca una pelicula...' 
-        value={searchValue}
-        onChange={onSearchValueChange} />,
+            className='search-bar' 
+            placeholder='Busca una pelicula...' 
+            // key={searchValue} // Si metemos esto se va el error pero no podemos escribir biens
+            value={searchValue}
+            onChange={onSearchValueChange} 
+        />,
 
     ];
 }
