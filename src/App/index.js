@@ -8,6 +8,9 @@ import { Movie } from '../Movie';
 import { MovieList } from '../Views/MovieList';
 import UserContextProvider from '../context/UserContext';
 
+
+
+
 // const testJson = {
 //   "adult": false,
 //   "backdrop_path": "/rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg",
@@ -104,7 +107,7 @@ function App() {
 
             <Route path={'/movielist'} element={<MovieList/>} />
 
-            {/* <Route path={'/'} element={<MovieList/>} />  SI PONEMOS ESTO ASI EMPIEZA CON LA LISTA DE PELICULAS */}
+            <Route path={'/movielist/:original_title'} element={<Movie/>} />  
             {/* <Route path={'/'} element={<Movie testJson={testJson}/>} /> */}
           </Routes>
           </UserContextProvider>
