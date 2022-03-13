@@ -6,6 +6,7 @@ import { Login } from '../Views/Login';
 import { Header } from '../Header';
 import { Movie } from '../Movie';
 import { MovieList } from '../Views/MovieList';
+import { MovieInfo } from '../Views/MovieInfo';
 import UserContextProvider from '../context/UserContext';
 
 
@@ -107,7 +108,7 @@ function App() {
 
             <Route path={'/movielist'} element={<MovieList/>} />
 
-            <Route path={'/movielist/id'} element={<MovieInfo id={id}/>} />  
+            <Route path={'/movielist/id'} element={<Movie />} />  
             {/* <Route path={'/'} element={<Movie testJson={testJson}/>} /> */}
           </Routes>
           </UserContextProvider>
