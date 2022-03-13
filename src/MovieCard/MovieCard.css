@@ -1,0 +1,10 @@
+.movieCard{
+    display: block;
+    width: 250px;
+    height: 450px;
+    text-align: center;
+    border-style: ridge;
+}
+h1 {
+    width: 100%;
+}
