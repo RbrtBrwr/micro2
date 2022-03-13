@@ -108,7 +108,7 @@ function App() {
 
             <Route path={'/movielist'} element={<MovieList/>} />
 
-            <Route path={'/movielist/id'} element={<Movie />} />  
+            <Route path={'/movielist/:movieID'} element={<Movie movie/>} />  
             {/* <Route path={'/'} element={<Movie testJson={testJson}/>} /> */}
           </Routes>
           </UserContextProvider>
