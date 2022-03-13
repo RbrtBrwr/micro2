@@ -1,4 +1,21 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #2e294e;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+div {
+  background-color: #2e294e;
+}
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +52,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

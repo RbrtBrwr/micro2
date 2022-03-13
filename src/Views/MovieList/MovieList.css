@@ -6,3 +6,9 @@ div {
     align-items:center;
 }
 
+button {
+    background-color: #0075A2;
+    border-style: none;
+    border-radius: 3px;
+}
+
