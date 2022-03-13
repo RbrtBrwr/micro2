@@ -2,8 +2,11 @@ import React from "react";
 import './MovieCard.css';
 
 function MovieCard(props){
+    const handleMovieClick = () => {
+        console.log(props.movieList.original_title);
+    }
     return(
-        <div className="movieCard">
+        <div className="movieCard" onClick={handleMovieClick}>
             <h1 className='movie__title' id='movie__title'>
                 {props.movieList.original_title}
             </h1>
