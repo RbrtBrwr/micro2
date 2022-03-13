@@ -100,6 +100,7 @@ function App() {
             <Route path={'/register'} element={<Register />} />
             <Route path={'/login'} element={<Login />} />
             <Route path={'/movielist'} element={<MovieList/>} />
+            {/* <Route path={'/'} element={<MovieList/>} />  SI PONEMOS ESTO ASI EMPIEZA CON LA LISTA DE PELICULAS */}
             {/* <Route path={'/'} element={<Movie testJson={testJson}/>} /> */}
           </Routes>
     </BrowserRouter>
