@@ -4,7 +4,7 @@ import './MovieCard.css';
 
 function MovieCard(props){
 
-    const navLinkRoute = `/movielist/${props.movieList.original_title}`;
+    const navLinkRoute = `/movielist/${props.movieList.id}`;
     
     return(
         <NavLink to={navLinkRoute}>
